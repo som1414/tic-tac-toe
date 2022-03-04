@@ -68,4 +68,3 @@ while flag:
                 flag = False
             break
         count += 1
-        priority = not priority
