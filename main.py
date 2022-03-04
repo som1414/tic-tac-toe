@@ -33,6 +33,7 @@ def who_victory(f, user):
            any([c.count(user) == len(f) for c in f]) or \
            any([c.count(user) == len(f) for c in [list(r) for r in zip(*f)]])
 
+
 flag = True
 while flag:
     print("Игра - 'крестики-нолики'")
