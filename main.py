@@ -58,7 +58,7 @@ while flag:
             x, y = users_motion(field, gamer)
             field[x - 1][y - 1] = user
             priority = not priority
-        elif count > size ** 2:
+        if count > size ** 2:
             build_field(field)
             print('Вы сыграли вничью')
             if input('Сыграете еще раз? д = да, н = нет\n') != 'д':
