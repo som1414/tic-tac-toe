@@ -65,7 +65,6 @@ while flag:
             break
         if who_victory(field, user):
             build_field(field)
-            field[x - 1][y - 1] = user
             print(f'Выйграл {gamer}')
             if input('Сыграете еще раз? д = да, н = нет\n') != 'д':
                 flag = False
