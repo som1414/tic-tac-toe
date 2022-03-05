@@ -53,13 +53,16 @@ while flag:
         else:
             user = f'\033[32m{"o"}\033[0m'
         build_field(field)
-        if count < size ** 2:
+        if count <= size ** 2:
             gamer = name[priority]
             x, y = users_motion(field, gamer)
             field[x - 1][y - 1] = user
             priority = not priority
-        elif count == size ** 2:
+        elif count > size ** 2:
+            build_field(field)
             print('Вы сыграли вничью')
+            if input('Сыграете еще раз? д = да, н = нет\n') != 'д':
+                flag = False
             break
         if who_victory(field, user):
             build_field(field)
