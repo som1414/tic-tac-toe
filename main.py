@@ -10,13 +10,13 @@ def build_field(f):
 def users_motion(f, n):
     while True:
         motion = input(f'{n} ведите координаты хода: ')
+        x, y = map(int, list(motion))
         if len(motion) != 2:
             print('Введите две координаты')
             continue
         if not (motion[0].isdigit() and motion[1].isdigit()):
             print('Координаты должны быть числами')
             continue
-        x, y = map(int, list(motion))
         if not (x >= 1 and x <= size and y >= 1 and y <= size):
             print(f'Вы вышли из диапазона доступных координат, введите числа от 1 до {size}')
             continue
